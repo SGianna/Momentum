@@ -9,7 +9,11 @@ function handleLoginSubmit(event) {
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
     localStorage.setItem("username",username);
-    greeting.innerText = `Hello ${username}`; //greeting.innerText = "Hello" + " " +loginInput.value;
+
+    // 문자열을 합치는 방법 2 가지
+    greeting.innerText = "Hello" + " " +loginInput.value;
+    greeting.innerText = `Hello ${username}`; 
+
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
